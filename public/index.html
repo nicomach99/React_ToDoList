@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Web site to order items in a To-do list"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -24,8 +24,66 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <link rel="stylesheet" type="text/css" href="../src/index.css" />
+
+    <!-- Script to copy the email-->
+    <script type="text/javascript">
+      function CopyMailToClipboard() {
+        navigator.clipboard.writeText("nicomach99@gmail.com");
+        console.log("Text copied");
+      }
+    </script>
+
+    <title>TO DO LIST | Keep it in order.</title>
   </head>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Keep it in order.</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              About
+            </a>
+            <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+            <div
+              class="dropdown-menu dropdown-menu-right animate slideIn"
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="dropdown-item">Author: Nicolás Machado</a>
+              <a class="dropdown-item">Email: nicomach99@gmail.com</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" onclick="CopyMailToClipboard()" href="#"
+                >-> Click here to copy email</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
